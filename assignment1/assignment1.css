@@ -1,10 +1,27 @@
 
-div {
+.border-div {
     border: black solid 1px;
     padding: 0.5em;
     margin: 1em auto;
 }
 
 img {
+    margin-bottom: 1em;
     border: black solid 1px;
+}
+
+#midbox {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#introtekst {
+    display: flex;
+    align-items: center;
+    margin-left: -5em;
+}
+
+h1, h2 {
+    display: flex;
+    justify-content: center;
 }

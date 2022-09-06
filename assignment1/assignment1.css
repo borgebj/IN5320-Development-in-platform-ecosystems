@@ -1,27 +1,33 @@
 
 .border-div {
     border: black solid 1px;
-    padding: 0.5em;
-    margin: 1em auto;
+    margin: 1em;
 }
 
+
 img {
-    margin-bottom: 1em;
     border: black solid 1px;
+    margin-right: 5em;
 }
 
 #midbox {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
+    margin: 1em;
 }
 
 #introtekst {
     display: flex;
     align-items: center;
-    margin-left: -5em;
 }
 
-h1, h2 {
-    display: flex;
+h1, h2, h3, p {
+    text-align: center;
+}
+
+#grid {
+    display: grid;
     justify-content: center;
+    grid-template-columns: 33% 33% 33%;
+    grid-template-rows: 50% 50%;
 }

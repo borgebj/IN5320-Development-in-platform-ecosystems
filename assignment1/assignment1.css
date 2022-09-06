@@ -4,7 +4,6 @@
     margin: 1em;
 }
 
-
 img {
     border: black solid 1px;
     margin-right: 5em;
@@ -28,6 +27,9 @@ h1, h2, h3, p {
 #grid {
     display: grid;
     justify-content: center;
-    grid-template-columns: 33% 33% 33%;
-    grid-template-rows: 50% 50%;
+    margin-left: 8em;
+    margin-right: 8em;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-gap: 0em;
 }

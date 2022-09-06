@@ -1,9 +1,17 @@
 
-.border, h2 {
+.border, h2, h4 {
     border: solid black 1px;
     padding: 1rem;
     margin: 1rem;
     text-align: center;
+}
+
+.outer {
+    background-color: lightgrey;
+}
+
+.inner {
+    background-color: darkgrey;
 }
 
 #flex {
@@ -13,6 +21,31 @@
 
 #grid {
     display: grid;
-    grid-template-rows: 50% 50%;
-    grid-template-columns: 50% 50%;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+}
+
+#midbox {
+    width: 12em;
+    height: auto;
+    display: flex;
+    font-size: 1.5em;
+    flex-flow: column;
+    align-items: center;
+    margin: 0 auto;
+}
+
+#areabox {
+    text-align: center;
+    border: solid black 1px;
+    display: grid;
+    grid-template-areas: "test test"
+                         "test test"
+                         "test test";
+    margin: 1em;
+    grid-gap: 1em;
+}
+
+p {
+    margin: 0.3em;
 }

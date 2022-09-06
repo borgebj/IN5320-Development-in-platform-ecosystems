@@ -6,19 +6,35 @@
     <link rel="stylesheet" href="test.css">
 </head>
 
-<div id="flex" class="border">
+<div id="flex" class="border outer">
     <h1>Overskrift 1</h1>
     <h1>Overskrift 2</h1>
 </div>
 
-<div id="grid" class="border">
-    <h2>underskrift</h2>
-    <h2>underskrift</h2>
-    <h2>underskrift</h2>
-    <h2>underskrift</h2>
+<div class="border outer">
+    <h3>Overskrift</h3>
+    <div class="inner" id="grid">
+        <h2>underskrift</h2>
+        <h2>underskrift</h2>
+        <h2>underskrift</h2>
+        <h2>underskrift</h2>
+    </div>
 </div>
-
 <body>
 
+<div id="midbox" class="outer">
+    <p>Div har border</p>
+    <p>Inner er grå</p>
+    <p>Outer er lysegrå</p>
+</div>
+
+<div id="areabox" class="outer">
+    <h4>1</h4>
+    <h4>2</h4>
+    <h4>3</h4>
+    <h4>4</h4>
+    <h4>5</h4>
+    <h4>6</h4>
+</div>
 </body>
 </html>

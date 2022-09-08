@@ -16,14 +16,19 @@ window.onload = function() {
         if (inputModify.value.trim()) {
             const newLi = document.createElement("li")
             newLi.innerText = inputModify.value
-            newLi.setAttribute("id", inputModify.value+"-id")
+            newLi.setAttribute("id", inputModify.value)
             list.appendChild(newLi)
         }
     })
 
     // Step 2 - Button click on remove deletes list elements
     remove.addEventListener("click", () => {
-        document.getElementById(inputModify.value+"-id").remove()
+        let lis = document.getElementsByTagName("li")
+        for (const element of lis) {
+            if (element.innerText === inputModify.value){
+                element.remove()
+            }
+        }
     })
 
 
@@ -58,10 +63,3 @@ function checkList(list, searchWord) {
     })
     return newList
 }
-
-function fetchAPI() {
-
-}
-
-fetchAPI()
-

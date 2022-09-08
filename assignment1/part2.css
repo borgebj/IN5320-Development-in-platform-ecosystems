@@ -6,16 +6,23 @@
     width: 300px;
 }
 
-input[type=text] {
-    width: 40%;
+input#modify {
+    width: 30%;
     padding: 0.5em 2em;
     margin: 8px 0 -0.5em;
     font-size: 1em;
 }
 
+input#search {
+    width: 75%;
+    padding: 0.5em 2em;
+    margin: 0.3em 0 -0.5em;
+    font-size: 1em;
+}
+
 button {
     text-align: center;
-    padding: 0.5em 2em;
+    padding: 0.5em 1em;
 }
 
 li {

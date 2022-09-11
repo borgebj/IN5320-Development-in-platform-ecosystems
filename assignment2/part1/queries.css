@@ -1,0 +1,38 @@
+
+.box-div {
+    border: solid black 1px;
+    padding: 1em;
+    margin: 10em auto;
+    width: 20em;
+}
+
+input#search {
+    width: 75%;
+    padding: 0.5em 2em;
+    margin: 0.3em 0 -0.1em;
+    font-size: 1em;
+}
+
+button {
+    width: 75%;
+    font-size: 1em;
+    padding: 0.5em 2em;
+    box-sizing: content-box;
+}
+
+#headText {
+    text-align: center;
+    margin: 0 auto -2em;
+    font-family: 'Raleway',sans-serif;
+    font-size: 2.8em
+}
+
+#resBox {
+    text-align: center;
+    margin: 0 auto;
+    width: 20em;
+}
+
+#resField {
+    font-size: 2em
+}

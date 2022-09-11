@@ -1,0 +1,2 @@
+
+ Kjør program med "yarn start"

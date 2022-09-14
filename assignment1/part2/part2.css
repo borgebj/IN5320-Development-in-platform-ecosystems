@@ -2,12 +2,12 @@
 .box-div {
     border: solid black 1px;
     padding: 1em;
-    margin: 0 auto;
+    margin: 3em auto;
     width: 300px;
 }
 
 input#modify {
-    width: 30%;
+    width: 40%;
     padding: 0.5em 2em;
     margin: 8px 0 -0.5em;
     font-size: 1em;
@@ -20,9 +20,21 @@ input#search {
     font-size: 1em;
 }
 
-button {
+button#buttonAdd {
     text-align: center;
     padding: 0.5em 1em;
+    width: 34%;
+    height: 2.8em;
+}
+
+label.delete-button {
+    margin-left: 0.5em;
+    padding: 0 0.2em 0 0.2em;
+    cursor: pointer;
+}
+
+i {
+    color: red;
 }
 
 li {

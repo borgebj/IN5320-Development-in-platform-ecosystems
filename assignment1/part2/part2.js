@@ -3,34 +3,55 @@ window.onload = function() {
 
     // Elements
     const add = document.getElementById("buttonAdd")
-    const remove = document.getElementById("buttonDelete")
     const list = document.querySelector("ul")
     const inputModify = document.getElementById("modify")
     const inputSearch = document.getElementById("search")
 
+
+    // mouseover events to change background
+    function add_hoved_style(icon, button){
+        button.addEventListener("mouseover", () => {
+            button.style.backgroundColor = "darkred"
+            icon.style.color = "white"
+        })
+        button.addEventListener("mouseout", () => {
+            button.style.backgroundColor = "white"
+            icon.style.color = "red"
+        })
+    }
 
     // Step 1 - Button click on add creates new list element
     add.addEventListener("click", () => {
 
         // checks if input is empty
         if (inputModify.value.trim()) {
+
+            // new list-element
             const newLi = document.createElement("li")
             newLi.innerText = inputModify.value
             newLi.setAttribute("id", inputModify.value)
+
+            // new button-element
+            const newButton = document.createElement("label")
+            newButton.className = "delete-button"
+
+            // icon for button
+            const icon = document.createElement("i")
+            icon.innerHTML = "&#67861;"
+
+            // removes list-element on click
+            newButton.addEventListener("click", () => {
+                newLi.remove()
+            })
+
+            add_hoved_style(icon, newButton)
+
+            newButton.appendChild(icon)
+            newLi.appendChild(newButton)
             list.appendChild(newLi)
+            inputModify.value = "";
         }
     })
-
-    // Step 2 - Button click on remove deletes list elements
-    remove.addEventListener("click", () => {
-        let lis = document.getElementsByTagName("li")
-        for (const element of lis) {
-            if (element.innerText === inputModify.value){
-                element.remove()
-            }
-        }
-    })
-
 
     // Step 4 - Updates list based on what's written in input in live-time
     inputSearch.addEventListener("keyup", () => {
@@ -52,6 +73,7 @@ function startsWith(element, searchWord) {
     return element.toLocaleLowerCase().startsWith(searchWord.toLowerCase());
 }
 
+// function tests
 console.assert(startsWith("Fortran","for") === true)
 console.assert(startsWith("Fortran","java") === false)
 

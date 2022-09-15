@@ -2,32 +2,28 @@
 // Elements
 const submit = document.getElementById("submit")
 const search = document.getElementById("search")
+const field = document.getElementById("resField")
 
 
 // Action if submit is pressed
 submit.addEventListener("click", () => {
     if (search.value.trim()) {
-        querySearch(search.value)
+        fetchData(search.value)
     }
 })
 
-function querySearch(country) {
-    let query = `https://dhis2-app-course.ifi.uio.no/api?Country=${country}`
-    query = "https://d6wn6bmjj722w.population.io/1.0/population/Norway/today-and-tomorrow/"
-    fetch(query, {
-        method: "GET",
-        headers: {
-                "Content-Type": "application/json"
-            }
-        }
-    )
-        .then(response => response.json())
-        .then(console.log)
+
+function fetchData(country) {
+    // let query = `https://d6wn6bmjj722w.population.io/1.0/population/${country}/today-and-tomorrow/`
+    let query = 'https://dhis2-app-course.ifi.uio.no/api'
+    fetch(query)
+        .then(res =>
+            res.json()
+        )
+        .then(data => useData(country, data))
+        .catch(error => console.log("ERROR"))
 }
 
-/*
-let query = `https://dhis2-app-course.ifi.uio.no/api?Country=${country}`
-query = "https://d6wn6bmjj722w.population.io/1.0/population/Norway/today-and-tomorrow/"
-const f = fetch(query).then((response) => response.json())
-console.log(await f)
- */
+function useData(country, data) {
+    console.log(country, ":", data)
+}

@@ -7,9 +7,9 @@
 
 ## Have installed: 
 - NodeJS  (https://nodejs.org/en/download/)
-> node
-> NPM
-> Yarn    (npm install -g yarn)
+* node
+* NPM
+* Yarn    (npm install -g yarn)
 
 # note
 - node_modules is in .gitignore so if any problem should occur this could be why

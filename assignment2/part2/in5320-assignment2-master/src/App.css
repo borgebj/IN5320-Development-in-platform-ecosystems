@@ -2,23 +2,59 @@
   text-align: center;
 }
 
-th, td {
-  padding: 1em;
-}
-
 table {
+  border: thin black solid;
   border-collapse: collapse;
   width: 80%;
+  height: 29em;
   margin: 0 auto;
 }
 
 th, td {
-  border: 1px solid lightgray;
   text-align: left;
-  padding: 0.3em;
+  padding: 0.3rem;
   font-size: 1.2em;
+  width:25%;
+  border-top: thin lightgray solid;
 }
 
-th {
+input[type=text], button#searchButton {
   font-size: 1.5em;
+  margin-bottom: 0.4em;
+}
+
+input[type=checkbox] {
+  width: 1.2em;
+  height: 1.2em;
+  margin-right: 0.5em;
+}
+
+label, p {
+  font-size: 1.3em;
+}
+
+select {
+  margin: 0 0 0 1em;
+  font-size: 1.2em
+}
+
+.pageButton {
+  margin: 1em;
+  font-size: 1em;
+  width: 6%;
+}
+
+.checkDiv {
+  margin: 0 auto;
+  border: thin black solid;
+  width: 80%;
+}
+
+.checkLine {
+  display: inline;
+  margin: 1em;
+}
+
+button, input[type=checkbox], select{
+  cursor: pointer;
 }

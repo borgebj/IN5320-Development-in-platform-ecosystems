@@ -14,7 +14,7 @@
 ### Starting the application
 - To start the base application, open the folder where the application lies, and open terminal / powershell and start app with the command `yarn start`
 
-### Conencting to the server-instance through application
+### Connect to the server-instance through application
 - Connection to server-instance through app only login is required. Credentials:
 > server: http://localhost:9999
 > username: admin

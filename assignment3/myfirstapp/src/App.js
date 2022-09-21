@@ -5,6 +5,7 @@ import { useState } from "react";
 import { Browse } from "./Browse";
 import { Insert } from "./Insert";
 import { Navigation } from "./Navigation";
+import Datasets from "./Datasets";
 
 function MyApp() {
   const [activePage, setActivePage] = useState("Browse");
@@ -22,8 +23,9 @@ function MyApp() {
         />
       </div>
       <div className={classes.right}>
-        {activePage === "Browse" && <Browse />}
-        {activePage === "Insert" && <Insert />}
+          {activePage === "Browse" && <Browse />}
+          {activePage === "Insert" && <Insert />}
+          {activePage === "Datasets" && <Datasets />}
       </div>
     </div>
   );

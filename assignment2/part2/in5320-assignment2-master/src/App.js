@@ -19,6 +19,7 @@ function App() {
     const [pageSize, setPageSize] = useState(10); // Default = pageSize 10
     const [continentQuery, setContinentQuery] = useState();
     const [lastPage, setLastPage] = useState();
+    const [sortQuery, setSortQuery] = useState();
 
     useEffect(() => {
         // All parameters are appended to this URL.
@@ -32,6 +33,10 @@ function App() {
         // [Step 6] if continentQuery isn't empty add &continentCode='continentQuery' to API request
         if (continentQuery) {
             apiQuery = apiQuery + "&ContinentCode=" + continentQuery;
+        }
+
+        if (sortQuery) {
+            apiQuery = apiQuery + sortQuery
         }
 
         // [step 3] Adding &pageSize='pageSize' to query with default of 10
@@ -49,7 +54,7 @@ function App() {
             setApiData(data);
             setLastPage(Math.ceil(data.pager.total / pageSize));
           });
-      }, [searchQuery, pageNumber, continentQuery, pageSize]); // Array containing which state changes that should re-run useEffect()
+      }, [searchQuery, pageNumber, continentQuery, pageSize, sortQuery]); // Array containing which state changes that should re-run useEffect()
     return (
         <div className="App">
             <h1>Country lookup</h1>
@@ -65,7 +70,10 @@ function App() {
             />
 
             {/* [Step 1] call to creation of table*/}
-            <Table apiData={apiData} />
+            <Table
+                apiData={apiData}
+                setSortQuery={setSortQuery}
+            />
 
             {/* [Step 4] Pagination component*/}
             <Pagination

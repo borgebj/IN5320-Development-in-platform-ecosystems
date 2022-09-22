@@ -1,13 +1,25 @@
+body {
+  background-color: lightcyan;
+}
 .App {
   text-align: center;
 }
 
 table {
+  background-color: aliceblue;
   border: thin black solid;
   border-collapse: collapse;
   width: 80%;
   height: 29em;
   margin: 0 auto;
+  box-shadow: 0.5em 0.5em 0.5em gray;
+}
+
+th {
+  background-color: lightblue;
+  border: 1px solid black;
+  cursor: pointer;
+  box-shadow: 0.1em 0.1em 0.1em gray;
 }
 
 th, td {
@@ -21,6 +33,7 @@ th, td {
 input[type=text], button#searchButton {
   font-size: 1.5em;
   margin-bottom: 0.4em;
+  box-shadow: 0.1em 0.1em 0.1em gray;
 }
 
 input[type=checkbox] {
@@ -29,13 +42,13 @@ input[type=checkbox] {
   margin-right: 0.5em;
 }
 
-label, p {
+label{
   font-size: 1.3em;
 }
 
 select {
   margin: 0 0 0 1em;
-  font-size: 1.2em
+  font-size: 1.2em;
 }
 
 .pageButton {
@@ -48,6 +61,7 @@ select {
   margin: 0 auto;
   border: thin black solid;
   width: 80%;
+  background-color: lightgoldenrodyellow;
 }
 
 .checkLine {

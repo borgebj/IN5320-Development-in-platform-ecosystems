@@ -4,7 +4,8 @@
   "dependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "tar": "^6.1.11"
+    "tar": "^6.1.11",
+    "yarn": "^1.22.19"
   },
   "devDependencies": {
     "@dhis2/cli-app-scripts": "^10.0.0"

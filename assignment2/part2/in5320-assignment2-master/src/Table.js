@@ -1,5 +1,16 @@
+import React, { useState } from "react";
+
 function Table(props) {
   console.log(props.apiData);
+
+  const [order, setOrder] = useState("DESC")
+  const dict = {"DESC":"ASC", "ASC":"DESC"}
+
+  const onClick = (e) => {
+    const value = e.target.textContent.replace(/\s/g, "")
+    props.setSortQuery("&order="+value+":"+order)
+    setOrder(dict[order])
+  }
 
   if (!props.apiData.results) {
     // If the API request isn't completed return "loading...""
@@ -9,10 +20,10 @@ function Table(props) {
     return <table>
       <thead>
         <tr>
-          <th>Country</th>
-          <th>Continent</th>
-          <th>Population</th>
-          <th>Population Growth</th>
+          <th onClick={onClick}>Country</th>
+          <th onClick={onClick}>Continent</th>
+          <th onClick={onClick}>Population</th>
+          <th onClick={onClick}>Population Growth</th>
         </tr>
       </thead>
       <tbody>

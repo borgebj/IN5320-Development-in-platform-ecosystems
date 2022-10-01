@@ -72,3 +72,8 @@ select {
 button, input[type=checkbox], select{
   cursor: pointer;
 }
+
+th:hover {
+  background-color: lightsteelblue;
+  box-shadow: 0.2em 0.2em 0.2em gray;
+}

@@ -12,6 +12,10 @@ function Table(props) {
     setOrder(dict[order])
   }
 
+  const onEnter = (e) => {
+    e.target.style.background_color = "black"
+  }
+
   if (!props.apiData.results) {
     // If the API request isn't completed return "loading...""
     return <p>Loading...</p>;

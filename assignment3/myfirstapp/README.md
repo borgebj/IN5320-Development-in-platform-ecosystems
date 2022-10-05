@@ -1,5 +1,18 @@
 This project was bootstrapped with [DHIS2 Application Platform](https://github.com/dhis2/app-platform).
 
+# How to run app
+1. Create and open a portal to DHIS2 using
+- `npx dhis-portal --target=https://data.research.dhis2.org/in5320/`
+
+2. Run the app with
+- `yarn start` or `npm start`
+<br />
+These two needs to run at the same time
+
+## login
+
+![img_1.png](img_1.png)
+
 ## Available Scripts
 
 In the project directory, you can run:

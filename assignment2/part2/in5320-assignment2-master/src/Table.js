@@ -6,14 +6,11 @@ function Table(props) {
   const [order, setOrder] = useState("DESC")
   const dict = {"DESC":"ASC", "ASC":"DESC"}
 
+  // when clicking header, sort by content
   const onClick = (e) => {
     const value = e.target.textContent.replace(/\s/g, "")
     props.setSortQuery("&order="+value+":"+order)
     setOrder(dict[order])
-  }
-
-  const onEnter = (e) => {
-    e.target.style.background_color = "black"
   }
 
   if (!props.apiData.results) {

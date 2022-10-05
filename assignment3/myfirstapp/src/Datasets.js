@@ -4,7 +4,8 @@ import classes from "./App.module.css";
 import { CircularLoader } from '@dhis2/ui'
 import { Menu } from '@dhis2/ui'
 import { MenuItem } from '@dhis2/ui'
-import { Table, TableHead, TableRowHead, TableCellHead, TableBody, TableRow, TableCell } from '@dhis2/ui'
+import TableSection from "./TableSection";
+
 
 const request = {
     request0: {
@@ -24,28 +25,6 @@ function Datasets(props) {
     const [id, setId] = useState()
     const [created, setCreated] = useState()
 
-    // Table element to be shown when clicking menuItem
-    const TableSection = () => (
-        <section>
-            <Table>
-                <TableHead>
-                    <TableRowHead>
-                        <TableCellHead>Display Name</TableCellHead>
-                        <TableCellHead>ID</TableCellHead>
-                        <TableCellHead>Created</TableCellHead>
-                    </TableRowHead>
-                </TableHead>
-
-                <TableBody>
-                    <TableRow>
-                        <TableCell>{name}</TableCell>
-                        <TableCell>{id}</TableCell>
-                        <TableCell>{created}</TableCell>
-                    </TableRow>
-                </TableBody>
-            </Table>
-        </section>
-    )
 
     // when menuItem is clicked: switch show on or off, and change name, id and created for use in table
     const onClick = (e) => {
@@ -69,7 +48,7 @@ function Datasets(props) {
     if (data) {
         console.log("API response:",data)
         const content = data.request0.dataSets
-        console.log(content)
+        console.log("API content:",content)
         return (
             <div className={classes.boxes}>
                 <aside>
@@ -84,8 +63,12 @@ function Datasets(props) {
                     </Menu>
                 </aside>
 
-                {/* Shows side-section if pressed */}
-                {show ? <TableSection/> : null}
+                {/* Shows side-table if pressed, else don't show anything */}
+                {show ? <TableSection
+                    name={name}
+                    id={id}
+                    created={created}
+                /> : null}
             </div>
         )
     }

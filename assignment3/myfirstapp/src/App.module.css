@@ -16,6 +16,29 @@
     background: #f0f0f0;
 }
 
+
 button[type=submit] {
     margin-top: 1em
+}
+
+aside {
+    flex-grow: 0;
+    height: 100%;
+    width: 100%;
+}
+
+Section {
+    background: #f0f0f0;
+    border-left: 1px solid grey;
+    width: 50%;
+}
+
+.boxes {
+    border: 1px solid grey;
+    display: flex;
+    height: 100%;
+}
+
+Table {
+    height: 10%;
 }
